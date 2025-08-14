@@ -1,3 +1,75 @@
-<div>
-  hello
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for the browser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple One-Page Site</title>
+
+    <!-- Link to Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link to Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- This style block enables smooth scrolling and sets the font -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!--
+      A sticky header with navigation buttons.
+      'sticky top-0' keeps it fixed at the top during scroll.
+    -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-center space-x-4">
+            <!-- Each button is a link to a section ID on this page -->
+            <a href="#section1" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Home</a>
+            <a href="#section2" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">About</a>
+            <a href="#section3" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content container -->
+    <main class="container mx-auto p-8">
+
+        <!--
+          Section 1: The 'id' attribute is the target for the navigation link.
+          'min-h-screen' ensures the section takes up at least the full height of the screen.
+          'pt-20' adds padding to the top to prevent content from hiding under the sticky header.
+        -->
+        <section id="section1" class="min-h-screen flex flex-col justify-center">
+            <h1 class="text-5xl font-bold mb-4">Welcome Home</h1>
+            <p class="text-xl text-gray-600">This is the first section. Clicking the "Home" button brings you here.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section2" class="min-h-screen flex flex-col justify-center">
+            <h2 class="text-5xl font-bold mb-4">About Us</h2>
+            <p class="text-xl text-gray-600">This is the second section, a different part of the page you can jump to.</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section3" class="min-h-screen flex flex-col justify-center">
+            <h2 class="text-5xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-xl text-gray-600">And this is the third and final section for contact information.</p>
+        </section>
+
+    </main>
+
+    <!-- A simple footer for the bottom of the page -->
+    <footer class="text-center py-8 text-gray-500">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
